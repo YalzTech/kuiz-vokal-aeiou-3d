@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kuiz Vokal AEIOU 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="startScreen" class="screen active">
+      <div class="hero-card">
+        <div class="rainbow">🌈</div>
+        <h1>Kuiz Vokal <span>AEIOU</span></h1>
+        <p>Bahasa Melayu – Prasekolah</p>
+        <button id="startBtn" class="primary-btn">Mula Kuiz</button>
+      </div>
+    </section>
+
+    <section id="quizScreen" class="screen">
+      <header class="topbar">
+        <button id="soundBtn" class="small-btn">🔊 Suara</button>
+        <div class="progress">
+          <span id="questionCount">1 / 15</span>
+          <div class="progress-bar"><div id="progressFill"></div></div>
+        </div>
+        <div class="score">⭐ <span id="scoreText">0</span></div>
+      </header>
+
+      <div class="quiz-card">
+        <p id="levelText" class="level">Tahap 1</p>
+        <h2 id="questionText">Soalan</h2>
+
+        <div class="model-stage">
+          <div id="modelObject" class="model-object">🐔</div>
+        </div>
+
+        <div id="blankWord" class="blank-word hidden"></div>
+        <div id="options" class="options"></div>
+        <p id="feedback" class="feedback"></p>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="screen">
+      <div class="result-card">
+        <h1>Tahniah! 🎉</h1>
+        <p>Kamu hebat!</p>
+        <div class="final-score">Skor: <span id="finalScore">0</span>/15</div>
+        <button id="playAgainBtn" class="primary-btn">Main Lagi</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="data/questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
